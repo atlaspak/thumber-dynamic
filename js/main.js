@@ -238,6 +238,11 @@ jQuery(document).ready(function ($) {
 	};
 
 	var addThumbsDynamically = function() {
+		if(!$('.swiper-wrapper').length) //this check if it should do the work
+		{
+			return;
+		}
+
 		var req = new XMLHttpRequest();
 		for(var i = 1; i < 100; i++){
 			var url = 'images/img_' + i  + '.jpg';
@@ -257,6 +262,11 @@ jQuery(document).ready(function ($) {
 	addThumbsDynamically();
 
 	var addImagesToGallery = function() {
+		if(!$('.align-items-stretch').length) //this check if it should do the work
+		{
+			return;
+		}
+
 		var req = new XMLHttpRequest();
 		for(var i = 1; i < 100; i++){
 			var url = 'images/img_' + i  + '.jpg';
